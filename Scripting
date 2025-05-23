@@ -1,1 +1,46 @@
+1.  What is Scripting? Uses.
+A.  
 
+
+
+
+2.  What is Client Side Scripting? UseCase.
+A.  Client side scripts excutes within a users browser and are used to manage forms and form fields.
+    Ex - Show an alert when from loads.
+         Valiadate from date.
+         Show/Hide choices of fields.
+         Hide/Show Section.
+         Set a value on the form.
+         Confirmation on Submit.
+    Where to use it?
+    UI Policy, UI Actions, Client Script, UI Context Menus, Validations Scripts.
+
+
+
+3.  What is Client Side API & Methods?
+A.  GlideAjax - It is used to call server side code from client.
+                Its instance is called with GlideAjax constructor. 
+                It is used for Client Scripting.
+                Syntax - var ga = new GlideAjax(<Script Include>),
+    GlideForm - It is used to customize forms and perform some activities on form.
+                By g_form Object we can access GlideForm methods.
+                It is used only in Client,
+                Syntax - g_form.<GlideFormMethod>(<Parameter>),
+    GlideUser - It is used to get the information about the logged in User. 
+                By g_user Object we can access GlideUser methods.
+                It is used only in client.
+                Syntax - g_user.<GlideUserMethods()>,
+    GlideDialogWindow - It is used for displaying a dialog in the current window and frame.
+                        It is used only in client, 
+    GlideModal.
+
+
+
+4.  What is Client scripting?
+A.  Client Script is used to manage forms and form fields in real time. It is excuted on browser.
+    When to use it.
+    Show the alert when form loads.
+    Show a message when field value changes.
+    Change a field value when another field changes on the form.
+    Hide/Show choices of field.
+    Hide/Show a section.
