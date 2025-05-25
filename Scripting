@@ -1,23 +1,81 @@
 1.  What is Scripting? Uses.
-A.  
+A.  Scripting in ServiceNow means writing small pieces of JavaScript code to make things work the way you want inside the platform.
+    It helps you automate tasks, control form behavior, or customize the system.
+
+    What It can do-
+   🔹Scripting can be done in servicenow to customize the instance of JS.
+   🔹ServiceNow provide classes and methods which can be used to enhance and customize the platform functionality.
+   🔹The JS used in servicenow is based on mozilla rhino.
+    When to use it-
+   🔹When you need to add features beyond the default (out-of-the-box) functionality.
+   🔹When you need to integrate ServiceNow with other applications or systems.
+   🔹When you want to automate manual tasks and workflows.
+    When to not use it-
+   🔹To make a field read-only → use UI Policy
+   🔹To hide a field when the form loads → use UI Policy or Form Layout
+   🔹To set a field value when the assignment group changes → use Data Policy or UI Policy with conditions
+    Uses- 
+   🔹To auto-fill fields.
+   🔹To hide/show things on a form.
+   🔹To send notifications.
+   🔹To update records automatically.
+   🔹To do calculations.
+    Types of Scripting-
+    1️⃣Client-Side Scripting.
+    2️⃣Server-Side Scripting.
+    3️⃣Mid-Server Scripting.
 
 
 
+2.  What is Glide Classes? Uses.
+A.  Glide classes are special built-in JavaScript classes provided by ServiceNow that help you interact with the platform, such as reading or updating records, handling dates, managing sessions, and more.
+    They are only available inside ServiceNow and are used mostly in server-side scripting.
+    Use-Cases-
+    🔹Access and modify database records.
+    🔹Get current user/session info.
+    🔹Work with dates/times.
+    🔹Send emails or messages.
+    🔹Log info for debugging.
+    Server-Side Glide Classes-
+    | Glide Class          | Purpose                                            |
+    | -------------------- | -------------------------------------------------- |
+    | `GlideRecord`        | Read/write records in tables (like SQL in JS)      |
+    | `GlideSystem (gs)`   | Utility methods like logging, date/time, user info |
+    | `GlideDateTime`      | Work with dates and times                          |
+    | `GlideUser`          | Get info about the logged-in user                  |
+    | `GlideAjax`          | Call server-side code from client-side             |
+    | `GlideForm (g_form)` | Used in client scripts to change form fields       |
+    | `GlideEmailOutbound` | Send emails using scripts                          |
 
-2.  What is Client Side Scripting? UseCase.
-A.  Client side scripts excutes within a users browser and are used to manage forms and form fields.
-    Ex - Show an alert when from loads.
-         Valiadate from date.
-         Show/Hide choices of fields.
-         Hide/Show Section.
-         Set a value on the form.
-         Confirmation on Submit.
+
+
+3.  What is Client Side Scripting? UseCase.
+A.  Client-side scripting runs in the user's browser and is used to control how forms behave on the UI (form layout, field visibility, validation, etc.)
+    Ex - Show an alert when the form loads.
+         Validate the "From Date" or other field inputs.
+         Show/Hide specific choices in dropdown fields.
+         Show/Hide sections on the form.
+         Set a field value based on another field.
+         Show a confirmation message on form submit.
     Where to use it?
-    UI Policy, UI Actions, Client Script, UI Context Menus, Validations Scripts.
+    🔹UI Policies – Make fields visible, read-only, or mandatory.
+    🔹Client Scripts – Write JavaScript for form behavior.
+    🔹UI Actions – Add buttons or links to forms.
+    🔹UI Context Menus – Add custom right-click options.
+    🔹Validation Scripts – Check field values before submission.
+    Client-side Glide Classes-
+    | Class               | Purpose                      | Runs In | Use Case Example                            |
+    | ------------------- | ---------------------------- | ------- | ------------------------------------------- |
+    | `GlideAjax`         | Call server-side from client | Browser | Fetch data (e.g., user email) dynamically   |
+    | `GlideDialogWindow` | Show custom modal windows    | Browser | Show confirmation or custom input dialogs   |
+    | `g_form`            | Control form fields          | Browser | Show/hide fields, set values, validate data |-Imp
+    | `GlideList2`        | Control list views           | Browser | Refresh or sort related lists dynamically   |
+    | `GlideMenu`         | Handle UI context menus      | Browser | Add custom right-click menu options         |
+    | `g_user`            | Get logged-in user info      | Browser | Check user role or get username             |
 
 
 
-3.  What is Client Side API & Methods?
+4.  What is Client Side API & Methods?
 A.  GlideAjax - It is used to call server side code from client.
                 Its instance is called with GlideAjax constructor. 
                 It is used for Client Scripting.
@@ -36,11 +94,62 @@ A.  GlideAjax - It is used to call server side code from client.
 
 
 
-4.  What is Client scripting?
-A.  Client Script is used to manage forms and form fields in real time. It is excuted on browser.
-    When to use it.
-    Show the alert when form loads.
-    Show a message when field value changes.
-    Change a field value when another field changes on the form.
-    Hide/Show choices of field.
-    Hide/Show a section.
+5.  What is Glide Form?
+A.  GlideForm (accessed using g_form) is a client-side API in ServiceNow used to control and interact with fields, sections, and form behavior in real-time on the form UI.
+    It allows you to:
+    🔹Show/hide fields.
+    🔹Set/get field values.
+    🔹Make fields mandatory or read-only.
+    🔹Display messages.
+    g_form is only available in Client Scripts, UI Policies, and Client-side scripting contexts.
+    Common g_form Methods:
+    addDecoration(), addErrorMessage(), 
+
+
+6.  What is Server Side Scripting? UseCase.
+A.  Server-side scripting in ServiceNow runs on the server and database, not in the user's browser.
+    It is used to manage data, enforce rules, send emails, and integrate with external systems.
+    Use-Case-
+    🔹 Update a field when a record is inserted or updated
+    🔹 Set a field value based on changes in the parent record
+    🔹 Validate the role of the logged-in user
+    🔹 Generate events for notifications or logging
+    🔹 Send automated emails or messages
+    Where to use it?
+    🔹Access Control Rules – Control who can see/edit data
+    🔹Business Rules – Automate logic before or after saving records
+    🔹Script Includes – Reusable functions for server scripts
+    🔹Transform Maps – Map and manipulate imported data
+    🔹Workflows / Flow Designer – Automate business processes
+    Server-side Glide Classes-
+    | Glide Class        | Purpose                                     | Example Use Case                            |
+    | ------------------ | ------------------------------------------- | ------------------------------------------- |
+    | `GlideRecord`      | Interact with database tables (CRUD ops)    | Query incidents, update records             |-Imp
+    | `GlideSystem (gs)` | Get Info about (logged user, current system)| Log messages, get user ID, get current time |-Imp
+    | `GlideElement`     | Work with individual fields of GlideRecord  | Check if a field is changed, set display    |
+    | `GlideDateTime`    | Handle date and time values                 | Compare or format date/time fields          |
+    | `GlideAggregate`   | Perform aggregate operations (COUNT, SUM)   | Count open incidents by priority            |-Imp
+ 
+
+
+7.  What is Client scripting?
+A.  Client Scripting is used to manage forms and form fields in real-time.
+    It runs in the user’s browser and enhances the user experience by dynamically responding to form actions.
+    When to use it-
+    🔹 Show an alert when the form loads
+    🔹 Show a message when a field value changes
+    🔹 Set a field value based on another field’s input
+    🔹 Show/Hide choices in a dropdown field
+    🔹 Show/Hide sections on the form
+    Types of Client Script-
+    | Type         | When It Executes                                                | Use Case Example                                     |
+    | ------------ | -------------------------------------------------------------   | ---------------------------------------------------- |
+    | `onLoad`     | When the form is initially loaded & before control given to user| Show a welcome alert or hide a field initially       |
+    |              | onLoad() func automatically populate when onload type selected  |                                                      |
+    | `onChange`   | When a specific field’s value updated & changes.                | Set another field value when priority changes        |
+    | `onSubmit`   | Just before the form is submitted OR saved.                     | Validate mandatory fields or show confirmation popup |
+    | `onCellEdit` | When a cell value is edited in a list (List V2 editable view)   | Auto-update status when assignment group is edited   |
+
+
+
+
