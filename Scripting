@@ -1,3 +1,5 @@
+Q - How to create Checkbox.
+
 1.  What is Scripting? Uses.
 A.  Scripting in ServiceNow means writing small pieces of JavaScript code to make things work the way you want inside the platform.
     It helps you automate tasks, control form behavior, or customize the system.
@@ -103,10 +105,15 @@ A.  GlideForm (accessed using g_form) is a client-side API in ServiceNow used to
     🔹Display messages.
     g_form is only available in Client Scripts, UI Policies, and Client-side scripting contexts.
     Common g_form Methods:
-    addDecoration(), addErrorMessage(), 
+    addDecoration(), addErrorMessage(), addInfoMessage(), addOption(),  clearOption(), clearValue(), disableAttachments(), enableAttachement(), flash(), getActionName(), getBooleanValue(), getControl(), getDecimalValue(), getIntValue(), getLabelOf(), getReference(), getSectionNames(), getSections(), getTableName(), getUniqueValue(), getValue(), hideRelatedList(), isLiveUpdating(), isMandatory(), isNewRecord(), isSectionVisible(), removeDecoration(), removeChoice(), save(), setDisabled(), setDisplay(), setLabelOf(), setMandatory(), setReadOnly(), setSectionDisplay(), setValue(), showErrorBox(), showFieldMsg(), showRelatedList(), submit(), 
 
 
-6.  What is Server Side Scripting? UseCase.
+6.  What is Glide User?
+A.  
+
+
+
+7.  What is Server Side Scripting? UseCase.
 A.  Server-side scripting in ServiceNow runs on the server and database, not in the user's browser.
     It is used to manage data, enforce rules, send emails, and integrate with external systems.
     Use-Case-
@@ -132,7 +139,7 @@ A.  Server-side scripting in ServiceNow runs on the server and database, not in 
  
 
 
-7.  What is Client scripting?
+8.  What is Client scripting?
 A.  Client Scripting is used to manage forms and form fields in real-time.
     It runs in the user’s browser and enhances the user experience by dynamically responding to form actions.
     When to use it-
@@ -152,4 +159,58 @@ A.  Client Scripting is used to manage forms and form fields in real-time.
 
 
 
+
+Test-Cases
+1.  Start_Date - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3D5ab00528c3b52610dbc11c65e40131df%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull%26sysparm_record_row%3D2%26sysparm_record_rows%3D42%26sysparm_record_list%3Dtable%253dincident%255eORtableINincident%252ctask%255eORDERBYDESCname
+    End_Date - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3Ded65a964c3792610dbc11c65e40131bc%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull%26sysparm_record_row%3D3%26sysparm_record_rows%3D42%26sysparm_record_list%3Dtable%253dincident%255eORtableINincident%252ctask%255eORDERBYDESCname
+    Testing - Incident > New.
+
+2.  7_Days_Gap - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3Da6b079acc3792610dbc11c65e4013174%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+    Testing - Incident > New.
+
+3.  Alert_Custom_View - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3D6c3a7d20c3f92610dbc11c65e40131b0%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+    Testing - Incident > Open > ≡ > View > Custom View.    
+    https://dev347964.service-now.com/now/nav/ui/classic/params/target/incident.do%3Fsysparm_userpref.incident_list.view%3Dcustom_view%26sysparm_userpref.incident.view%3Dcustom_view%26sysparm_view%3Dcustom_view%26sys_id%3D1366f49cc371e210dbc11c65e401312e%26sysparm_record_target%3Dincident%26sysparm_record_row%3D2%26sysparm_record_rows%3D45%26sysparm_record_list%3Dactive%253Dtrue%255EORDERBYDESCnumber%26sysparm_nostack%3Dtrue
+
+4.  Original_Priority_Value - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3Dac028e28c3f92610dbc11c65e4013174%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull%26sysparm_record_row%3D20%26sysparm_record_rows%3D46%26sysparm_record_list%3Dtable%253dincident%255eORtableINincident%252ctask%255eORDERBYDESCname
+    Changed_Priority_Value - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3D60a28aa8c3f92610dbc11c65e4013183%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+    Testing - Incident > New.[Not working]
+
+5.  Planned_Start_Date - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3D92a673a0c3f12210dbc11c65e40131f1%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+    Planned_End_Date - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3D9268b364c3f12210dbc11c65e40131e9%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+    Test - Change > Create New.[Not Working]
+
+6.  Set_Urgency - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3D9b5a4430c3352210dbc11c65e4013119%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull%26sysparm_record_row%3D10%26sysparm_record_rows%3D49%26sysparm_record_list%3Dtable%253dincident%255eORtableINincident%252ctask%255eORDERBYDESCname
+    Testing - Incident > VIP.
+
+7.  Child_Incident - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3Dc3efe47cc3f52210dbc11c65e40131a5%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+    Testing - Incident > Existing.
+
+8.  Notes_Section - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3D2fc438f0c3392210dbc11c65e40131ec%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+    Testing - Problem > New.
+
+9.  Show_Active_Users - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3Da4b48578c3792210dbc11c65e40131b2%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+    Testing - Incident > New > Active[Checkbox].
+
+10. Custom_View - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3D6c3a7d20c3f92610dbc11c65e40131b0%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+    Testing - Incident > New > View.
+
+11. Motivational_Quote - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3D3a5b4dfcc3792210dbc11c65e401316d%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+    Testing - Incident > Existing.
+    
+12. Sarcastic_Priority_Change - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3D8cc09538c3b92210dbc11c65e40131ba%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+    Testing - Incident > New > Change Priority.
+
+13. Confirm_Submit_Suggestion - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3D6a53ddf8c3b92210dbc11c65e40131fd%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+    Testing - Incident > New > Submit.
+
+14. Edit_Fields_Message - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3De9e715b0c3f92210dbc11c65e401316b%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+    Testing - Incident > New.[Not Working]
+
+15. Show/Hide fields based on Category - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3D0bd07db0c37d2210dbc11c65e401310c%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+    Testing - Incident > New.
+
+16. 
+
+26. 
 
