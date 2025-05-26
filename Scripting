@@ -210,7 +210,20 @@ Test-Cases
 15. Show/Hide fields based on Category - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3D0bd07db0c37d2210dbc11c65e401310c%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
     Testing - Incident > New.
 
-16. 
+16. Show field based on category - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3D0bd07db0c37d2210dbc11c65e401310c%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+    Testing - Incident > New.
+
+17. Personalized Greeting - https://dev347964.service-now.com/now/nav/ui/classic/params/target/incident.do%3Fsysparm_nostack%3Dtrue%26sys_id%3De41611fcc3b92210dbc11c65e4013184%26sysparm_record_target%3Dincident%26sysparm_record_row%3D3%26sysparm_record_rows%3D49%26sysparm_record_list%3Dactive%253Dtrue%255EORDERBYDESCnumber
+18. Testing - Incident > New.
+
+19. Validate Description Length - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3Da690febcc3716210dbc11c65e40131fc%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+20. Testing - Incident > New.
+
+21. Auto Assign the Name - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3D91973634c3b16210dbc11c65e4013192%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+22. Testing - Incident > New > AssignTo.
+
+23. Mark Resolved Prompt - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3D862c7a3cc3b16210dbc11c65e401315a%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+24. Testing - Incident > New > State.
 
 26. 
 
