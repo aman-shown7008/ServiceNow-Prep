@@ -159,6 +159,32 @@ A.  Client Scripting is used to manage forms and form fields in real-time.
 
 
 
+9.  What is Glide Record?
+A.  Object contaning Record.
+    Used for database operation.
+    Excuted on server side.
+
+
+
+10. What is Business Rule?
+A.  Server side Script that runs when record is displayed, inserted, updated, or deleted or when table is queried.
+    Used to change values in the field when specific condition is met & its runs on server side.
+    Runs with all the ways record is accessed like list, Form or Web service.
+    When to run BR - 
+    🔹After - After BR excute when form is submitted and record is updated in the database.
+    🔹Before - Before BR excute when form is submitted but before record is updated in the database.
+    🔹Async - Async BR runs after record are inserted, modified or queried.
+    🔹Display - Display BR runs when data is read from the database and before presenting to the user.
+    What Operation BR will runs- 
+    🔹Insert
+    🔹Update
+    🔹Delete 
+    🔹Query
+    Global variables of BR-
+    🔹current 
+    🔹previous
+    🔹g_scratchpad
+    🔹Glide system[gs]
 
 Test-Cases
 1.  Start_Date - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3D5ab00528c3b52610dbc11c65e40131df%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull%26sysparm_record_row%3D2%26sysparm_record_rows%3D42%26sysparm_record_list%3Dtable%253dincident%255eORtableINincident%252ctask%255eORDERBYDESCname
@@ -225,5 +251,26 @@ Test-Cases
 23. Mark Resolved Prompt - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3D862c7a3cc3b16210dbc11c65e401315a%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
 24. Testing - Incident > New > State.
 
+25. New Incident - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script.do%3Fsys_id%3D2c58c7fcc3f16210dbc11c65e401314c%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+    Business Rules - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script.do%3Fsys_id%3D2c58c7fcc3f16210dbc11c65e401314c%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+
 26. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
