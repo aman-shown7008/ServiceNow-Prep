@@ -96,6 +96,14 @@ A.  GlideAjax - It is used to call server side code from client.
 
 
 
+5.  How to debug the client script?
+A.  Tools for debugging client script-
+    🔹JavaScript Log.
+    🔹Field Watcher.
+    🔹Response Time Indicator.
+    🔹Try/Catch of JS.
+
+
 5.  What is Glide Form?
 A.  GlideForm (accessed using g_form) is a client-side API in ServiceNow used to control and interact with fields, sections, and form behavior in real-time on the form UI.
     It allows you to:
