@@ -1,0 +1,81 @@
+Q.  ServiceNow -
+A.  No-Code Workflow Engine:
+    Build and update business processes visually — no coding required.
+
+    Built-in Modules:
+    Includes ready-to-use features like SLA tracking, email notifications, audit logs, approvals, and CMDB.
+
+    Secure & Scalable:
+    Role-based access, compliance, and scalability are handled out of the box.
+
+    Faster Delivery:
+    What takes weeks/months to build in ReactJS can be delivered in hours using ServiceNow.
+
+
+1.  Ways to interact with Service Now.
+A.  UI, Mobile Apps, Portal Interface.
+
+
+
+2.  List, Filter & Forms.
+A.  A role gives access to specific applications, modules, and data inside the ServiceNow instance.
+    For example:
+    The itil role allows users to work with incidents and tasks.
+    The admin role allows full access to almost everything.
+    The catalog_admin role allows managing the service catalog.
+
+
+
+3.  Name two baseline system roles.
+A.  Two Baseline System Roles in ServiceNow:
+    admin - 
+    Has full control over the entire ServiceNow platform.
+    Can create, modify, and delete tables, scripts, roles, users, and all configurations.
+    Automatically inherits all other roles.
+    itil - 
+    Stands for IT Infrastructure Library.
+    Used by IT service desk agents.
+    Grants access to Incident, Problem, Change, and Task tables.
+    Common role for handling day-to-day ITSM processes.
+
+
+
+4.  Incident we select in dropsown onn Tables.
+A.  The dropdown pulls data from the incident table.
+    It's a reference field, which stores a sys_id of the selected incident record behind the scenes.
+    What you see in the dropdown is typically the Incident Number (like INC0012345).
+
+    When you select "Incident" from a dropdown, you're usually choosing a specific incident record to link or reference in another table or form.
+
+
+
+5.  Uses of Service Desk Application.
+A.  Caller - All users of our System.
+    Incident - The issues that are in Priority.
+    Knowledge - We can access different racats.
+    My Work - Any thing that assign to you.
+    My Group Works - Any thing that assign to your group.
+    My Approvals - 
+
+
+
+6.  LifeCycle of Article - 
+A.  Article is created -> Sent for Approval -> Article is published -> Article is requested to retired -> Sent for Approval -> Article is Retired.
+
+
+
+7.  What is Tables?
+A.  A table is a collection of records in the database where information can be entered tables have different rows and these indivtual rows correspond to a record in a table. It also have columns which correspond to a field in a record or row.
+    Row is a racket which shows the details of the racket in the forms of field and stores the data.
+    Types of tables-
+    Base Table, Extended Tables, Core Tables, Custom Tables.
+
+
+
+8.  What is Dictionary?
+A.  It shows list of all column of all the tables of your instance have which is also called dictionary.
+
+
+
+9.  What is Fields?
+A.  It is a column of tables which stores the actual data it can be of different types like string choice reference true OR false the major attribute.
