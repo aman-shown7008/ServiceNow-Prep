@@ -74,6 +74,7 @@ A.  A table is a collection of records in the database where information can be 
 
 8.  What is Dictionary?
 A.  It shows list of all column of all the tables of your instance have which is also called dictionary.
+    The Dictionary is the only place where you define the data type and field-level properties like length, default value, read-only, mandatory (system-enforced), reference relationships, and field labels at the table schema level.
     A Dictionary Entry in ServiceNow defines how a field behaves in a table: its type, length, mandatory setting, default value, display setting, etc.
     Test-Case - 
     Create a new field phone_number in the User table with 10 length only.
@@ -124,5 +125,10 @@ A.  UI Policy is for the user interface only, to control how the form looks and 
     https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_ui_policy.do%3Fsys_id%3D7ee7dd61c3b52610dbc11c65e4013195%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
 
     Data Policy is more powerful for backend validation — it enforces rules on any data entry method, whether it's through the UI, import set, or REST API. It helps keep the data clean and consistent.
+
+
+    On the other hand, Data Policy is used when we want to enforce field-level rules on the server side — meaning the rules apply no matter how the data is coming in (UI form, REST API, import sets, or background scripts).
+    Data Policy ensures data consistency across all sources, not just the UI.
+    Like: If we make “Configuration Item” mandatory via Data Policy when Category = Network, it will block the record from being saved, even if it was created through API or import — not just the form.
 
 
