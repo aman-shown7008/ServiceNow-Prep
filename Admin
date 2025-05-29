@@ -40,7 +40,7 @@ A.  Two Baseline System Roles in ServiceNow:
 
 
 
-4.  Incident we select in dropsown onn Tables.
+4.  What is Incident we select in dropdown on Tables.
 A.  The dropdown pulls data from the incident table.
     It's a reference field, which stores a sys_id of the selected incident record behind the scenes.
     What you see in the dropdown is typically the Incident Number (like INC0012345).
