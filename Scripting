@@ -239,7 +239,7 @@ Test-Cases
     Testing - Incident > New > Submit.
 
 14. Edit_Fields_Message - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3De9e715b0c3f92210dbc11c65e401316b%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
-    Testing - Incident > New.[Not Working]
+    Testing - Incident > New.
 
 15. Show/Hide fields based on Category - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3D0bd07db0c37d2210dbc11c65e401310c%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
     Testing - Incident > New.
