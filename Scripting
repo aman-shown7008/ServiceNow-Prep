@@ -209,6 +209,16 @@ A.  UI Policy is used to changes the behaviour of information on the form.
 
 
 
+12. What is Business Ruke?
+A.  Server Side Scripts that runs when record is displayed, inserted, updated OR deleted, when table is queried.
+    Used to change values in the field when specific is met.
+    Runs on server Side.
+    Runs with all the ways where record is accessed like List, Form or Web Service.
+
+
+
+
+
 Test-Cases
 1.  Start_Date - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3D5ab00528c3b52610dbc11c65e40131df%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull%26sysparm_record_row%3D2%26sysparm_record_rows%3D42%26sysparm_record_list%3Dtable%253dincident%255eORtableINincident%252ctask%255eORDERBYDESCname
     End_Date - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3Ded65a964c3792610dbc11c65e40131bc%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull%26sysparm_record_row%3D3%26sysparm_record_rows%3D42%26sysparm_record_list%3Dtable%253dincident%255eORtableINincident%252ctask%255eORDERBYDESCname
