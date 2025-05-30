@@ -104,7 +104,7 @@ A.  Tools for debugging client script-
     🔹Try/Catch of JS.
 
 
-5.  What is Glide Form?
+6.  What is Glide Form?
 A.  GlideForm (accessed using g_form) is a client-side API in ServiceNow used to control and interact with fields, sections, and form behavior in real-time on the form UI.
     It allows you to:
     🔹Show/hide fields.
@@ -116,12 +116,12 @@ A.  GlideForm (accessed using g_form) is a client-side API in ServiceNow used to
     addDecoration(), addErrorMessage(), addInfoMessage(), addOption(),  clearOption(), clearValue(), disableAttachments(), enableAttachement(), flash(), getActionName(), getBooleanValue(), getControl(), getDecimalValue(), getIntValue(), getLabelOf(), getReference(), getSectionNames(), getSections(), getTableName(), getUniqueValue(), getValue(), hideRelatedList(), isLiveUpdating(), isMandatory(), isNewRecord(), isSectionVisible(), removeDecoration(), removeChoice(), save(), setDisabled(), setDisplay(), setLabelOf(), setMandatory(), setReadOnly(), setSectionDisplay(), setValue(), showErrorBox(), showFieldMsg(), showRelatedList(), submit(), 
 
 
-6.  What is Glide User?
+7.  What is Glide User?
 A.  
 
 
 
-7.  What is Server Side Scripting? UseCase.
+8.  What is Server Side Scripting? UseCase.
 A.  Server-side scripting in ServiceNow runs on the server and database, not in the user's browser.
     It is used to manage data, enforce rules, send emails, and integrate with external systems.
     Use-Case-
@@ -147,7 +147,7 @@ A.  Server-side scripting in ServiceNow runs on the server and database, not in 
  
 
 
-8.  What is Client scripting?
+9.  What is Client scripting?
 A.  Client Scripting is used to manage forms and form fields in real-time.
     It runs in the user’s browser and enhances the user experience by dynamically responding to form actions.
     When to use it-
@@ -167,14 +167,14 @@ A.  Client Scripting is used to manage forms and form fields in real-time.
 
 
 
-9.  What is Glide Record?
+10. What is Glide Record?
 A.  Object contaning Record.
     Used for database operation.
     Excuted on server side.
 
 
 
-10. What is Business Rule?
+11. What is Business Rule?
 A.  Server side Script that runs when record is displayed, inserted, updated, or deleted or when table is queried.
     Used to change values in the field when specific condition is met & its runs on server side.
     Runs with all the ways record is accessed like list, Form or Web service.
@@ -193,6 +193,21 @@ A.  Server side Script that runs when record is displayed, inserted, updated, or
     🔹previous
     🔹g_scratchpad
     🔹Glide system[gs]
+
+
+
+12. What is UI Policy?
+A.  UI Policy is used to changes the behaviour of information on the form.
+    Runs at client Side.
+    It is primarily used to make fields Read-only, visible and mandatory on the form.
+    No scripting is required.
+    Advanced changes required scripting.
+    Why we need UI Policy- 
+    🔹Scripting in UI Policy enable a developer to create a complex condition and execute advanced behaviour.
+    🔹Any behaviour addition to configurable functionality needs scripting.
+    OOB[Out Of Box] UI Policy - ServiceNow has developed OOB UI Policy which are the baseline of UI Policy.
+
+
 
 Test-Cases
 1.  Start_Date - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3D5ab00528c3b52610dbc11c65e40131df%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull%26sysparm_record_row%3D2%26sysparm_record_rows%3D42%26sysparm_record_list%3Dtable%253dincident%255eORtableINincident%252ctask%255eORDERBYDESCname
