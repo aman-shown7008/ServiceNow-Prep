@@ -104,6 +104,7 @@ A.  Tools for debugging client script-
     🔹Try/Catch of JS.
 
 
+
 6.  What is Glide Form?
 A.  GlideForm (accessed using g_form) is a client-side API in ServiceNow used to control and interact with fields, sections, and form behavior in real-time on the form UI.
     It allows you to:
@@ -114,6 +115,7 @@ A.  GlideForm (accessed using g_form) is a client-side API in ServiceNow used to
     g_form is only available in Client Scripts, UI Policies, and Client-side scripting contexts.
     Common g_form Methods:
     addDecoration(), addErrorMessage(), addInfoMessage(), addOption(),  clearOption(), clearValue(), disableAttachments(), enableAttachement(), flash(), getActionName(), getBooleanValue(), getControl(), getDecimalValue(), getIntValue(), getLabelOf(), getReference(), getSectionNames(), getSections(), getTableName(), getUniqueValue(), getValue(), hideRelatedList(), isLiveUpdating(), isMandatory(), isNewRecord(), isSectionVisible(), removeDecoration(), removeChoice(), save(), setDisabled(), setDisplay(), setLabelOf(), setMandatory(), setReadOnly(), setSectionDisplay(), setValue(), showErrorBox(), showFieldMsg(), showRelatedList(), submit(), 
+
 
 
 7.  What is Glide User?
@@ -193,6 +195,16 @@ A.  Server side Script that runs when record is displayed, inserted, updated, or
     🔹previous
     🔹g_scratchpad
     🔹Glide system[gs]
+    How BR works-
+    🔹Triger-
+    🔹Action-
+    🔹Action Taken-
+    When to Run BR-
+    🔹After- After BR excute when form is submitted and record is updated in database.
+    🔹Before- Before BR is excute when form is submitted but before record is updated in database.
+    🔹Async- Async BR runs when record are inserted, modified or queried. 
+    🔹Await- It runs when data is read from database and before presenting to the user.
+    
 
 
 
@@ -209,14 +221,51 @@ A.  UI Policy is used to changes the behaviour of information on the form.
 
 
 
-12. What is Business Ruke?
-A.  Server Side Scripts that runs when record is displayed, inserted, updated OR deleted, when table is queried.
-    Used to change values in the field when specific is met.
-    Runs on server Side.
-    Runs with all the ways where record is accessed like List, Form or Web Service.
+13. What is g_scratchpad?
+A.  g_scratchpad is a JavaScript object used to pass data from server-side to client-side scripts when a form loads.
+    It’s automatically available on the client side — no need for GlideAjax or extra calls.
+    Why use it?
+    🔹To avoid extra server calls (GlideAjax).
+    🔹To pass server data like user info, roles, field values to the client.
+    🔹To make forms load faster and easier to manage.
+    Where is it used?
+    🔹Server-side: UI Script or Catalog Client Script (Script section)
+    🔹Client-side: Client Script (usually onLoad)
 
 
 
+14. What is Glide System?
+A.  Object to access system level information.
+    Provide no of methods.
+    Provide methods to perform dates calculation.
+    Runs on server sides.
+    Glide System Methods-
+    getUser(), getUserName(), getUserID(), getUserDisplayName(), hasRole().
+
+
+
+15. What is Glide Record?
+A.  Objects containing Records.
+    Used for database Operation.
+    Excuted on server side.
+
+
+
+16. What is GlideAggregate in ServiceNow?
+A.  GlideAggregate is a server-side API in ServiceNow used to perform aggregate functions like:
+    COUNT()
+    SUM()
+    AVG() (Average)
+    MIN()
+    MAX()
+    GROUP BY
+    It works similarly to SQL aggregate queries and is useful when you want summary data instead of full records.
+    Why use GlideAggregate?
+    🔹To count records (e.g., number of open incidents).
+    🔹To sum values (e.g., total cost).
+    🔹To get min/max values (e.g., earliest due date).
+    🔹To group records (e.g., number of incidents per priority).
+    🔹To improve performance — faster than looping through full records with GlideRecord.
 
 
 Test-Cases
