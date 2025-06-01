@@ -268,6 +268,31 @@ A.  GlideAggregate is a server-side API in ServiceNow used to perform aggregate 
     🔹To improve performance — faster than looping through full records with GlideRecord.
 
 
+
+17. What is Scheduled jobs?
+A.  Automated part of logic which excutes at a specific time and can be reoccurred with some frequency.
+    Any action which needs to be perform at a particular time ahould be accommodated with schedules jobs.
+    Ex - Run a report,
+         Excution of a script.
+    Scheduled Job States - 
+    Ready, Running, Queued, Error.
+    Scheduled Jobs Tasks-
+    🔹Generation and distribution of report.
+    🔹Generate record from template.
+    🔹Run a script to create a report.
+    🔹Generation and distribution of report.
+    Condition Script-
+    🔹Condition is field is selected if scheduled job need to be run after meeting a condition.
+    🔹Server Side Code.
+    🔹Don't is current OR previous.
+    🔹Condition should evalute to true.
+
+
+
+18. What is Events?
+A.  
+
+
 Test-Cases
 1.  Start_Date - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3D5ab00528c3b52610dbc11c65e40131df%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull%26sysparm_record_row%3D2%26sysparm_record_rows%3D42%26sysparm_record_list%3Dtable%253dincident%255eORtableINincident%252ctask%255eORDERBYDESCname
     End_Date - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script_client.do%3Fsys_id%3Ded65a964c3792610dbc11c65e40131bc%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull%26sysparm_record_row%3D3%26sysparm_record_rows%3D42%26sysparm_record_list%3Dtable%253dincident%255eORtableINincident%252ctask%255eORDERBYDESCname
@@ -336,7 +361,10 @@ Test-Cases
 25. New Incident - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script.do%3Fsys_id%3D2c58c7fcc3f16210dbc11c65e401314c%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
     Business Rules - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script.do%3Fsys_id%3D2c58c7fcc3f16210dbc11c65e401314c%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
 
-26. 
+41. BR - https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_script.do%3Fsys_id%3De1f3c9b6c3792210dbc11c65e401315f%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull%26sysparm_view%3D
+    Testing - Users > New.
+
+42. 
 
 
 
