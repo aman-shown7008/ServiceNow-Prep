@@ -12,6 +12,7 @@ A.  No-Code Workflow Engine:
     What takes weeks/months to build in ReactJS can be delivered in hours using ServiceNow.
 
 
+
 1.  Ways to interact with Service Now.
 A.  UI, Mobile Apps, Portal Interface.
 
@@ -119,16 +120,21 @@ A.  Notification - A Notification in ServiceNow is used to automatically send em
 12. What is UI Policy? 
 A.  UI Policy is for the user interface only, to control how the form looks and behaves for the user — like hiding, showing, making fields mandatory/read-only.
     Make a field mandatory, read-only, or hidden based on conditions.
-    Test-Case-
+    Basically by the help of this if we want to make field read-only, mandatory, hidden so by this we can do this. But this field position can be change by the scripts also.
+    Test-Case- 
     Make Impact Mandatory if Category is Network.
     Hide Subcategory if our Category is Network.
     https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_ui_policy.do%3Fsys_id%3D7ee7dd61c3b52610dbc11c65e4013195%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
+    1.Make “Caller” field mandatory if “Subcategory” is “Email”-
+    https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_ui_policy.do%3Fsys_id%3Dd3820ad3c375e210dbc11c65e401315e%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull%26sysparm_view%3Dadvanced
+    2.If Impact is 3 - Low, make “Urgency” mandatory and read-only.
+    https://dev347964.service-now.com/now/nav/ui/classic/params/target/sys_ui_policy.do%3Fsys_id%3De54d0a17c3b5e210dbc11c65e4013137%26sysparm_view%3Dadvanced%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull
 
     Data Policy is more powerful for backend validation — it enforces rules on any data entry method, whether it's through the UI, import set, or REST API. It helps keep the data clean and consistent.
+    In this if we want to make fields read only OR mandatory then we can but we can not make fields Show/Hide based on condition. 
+
+    Imp- Suppose if in incident form if we want make any field mandatory by UI Policy & by Data Policy if we make that field read-only. Then data policy condition will apply becz data policy gets direct changes to server side[ backend thing ] but UI Policy gets direct apply to client side.
 
 
-    On the other hand, Data Policy is used when we want to enforce field-level rules on the server side — meaning the rules apply no matter how the data is coming in (UI form, REST API, import sets, or background scripts).
-    Data Policy ensures data consistency across all sources, not just the UI.
-    Like: If we make “Configuration Item” mandatory via Data Policy when Category = Network, it will block the record from being saved, even if it was created through API or import — not just the form.
 
 
