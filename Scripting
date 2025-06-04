@@ -78,7 +78,7 @@ A.  Client-side scripting runs in the user's browser and is used to control how 
 
 
 4.  What is Client Side API & Methods?
-A.  GlideAjax - It is used to call server side code from client.
+A.  GlideAjax - It provides a way to retrieve or process data from the server asynchronously using AJAX from the client.
                 Its instance is called with GlideAjax constructor. 
                 It is used for Client Scripting.
                 Syntax - var ga = new GlideAjax(<Script Include>),
@@ -289,8 +289,35 @@ A.  Automated part of logic which excutes at a specific time and can be reoccurr
 
 
 
-18. What is Events?
-A.  
+18. What is Catalog? Uses.
+A.  A Catalog Item is like a request form in ServiceNow — for getting help, services, or access.
+    Just like shopping online, but inside your company.
+    Use-Case-
+    "Request a Laptop", "Reset Password", or "Create Email Account".
+
+
+
+19. What is Flow Designer? Use-case.
+A.  Flow Designer is a no-code / low-code tool in ServiceNow that lets you automate processes — like approvals, notifications, task creation — without writing scripts.
+    Scenario - Whenever a High Priority Incident is created,
+               automatically assign it to the Network Support group
+               and send a notification to the group manager.
+   Set-Up- Go to Flow Designer
+           → Create New Flow: Auto Assign High Priority Incident
+           Trigger: Table = Incident
+           Condition: Priority is High
+           Actions: Update Record → Set Assignment Group = Network Support
+           Send Notification → Notify Group Manager via email
+           Save and Activate.
+
+
+
+20. What is ACLs?
+A.  ACL stands for Access Control List. It controls who can see, read, write, create, or delete data in tables, records, or fields.
+    Uses-
+    Protect sensitive data.
+    Control user access based on role, condition, or script.
+    Apply security at table-level, record-level, or field-level.
 
 
 Test-Cases
