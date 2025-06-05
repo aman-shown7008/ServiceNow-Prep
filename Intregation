@@ -1,2 +1,17 @@
-Q.  What is Intregation?
-A.  
+1.  What is Intregation?
+A.  HTTP-based web services allow diverse applications to talk to each other. ServiceNow supports both inbound (provider) and outbound (consumer) web services.
+    Applications You Can Connect with ServiceNow-
+    🔹Salesforce – CRM and case/ticket sync.
+    🔹Jira – Issue/ticket management for DevOps workflows.
+    🔹Microsoft Azure – Cloud resource and incident syncing.
+    🔹Splunk – For monitoring, logging, and triggering alerts.
+    🔹Slack – Real-time notifications, approval actions, or chatbot integrations.
+    Types of Integration:
+    1️⃣Inbound Integration-
+    When a third-party system sends data to ServiceNow. The trigger happens externally, and ServiceNow receives and processes the data.
+    2️⃣Outbound Integration-
+    When ServiceNow sends data to a third-party system. The trigger is initiated from within ServiceNow based on specific conditions.
+
+
+
+2.  What is ?
