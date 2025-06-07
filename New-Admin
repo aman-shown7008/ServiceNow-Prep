@@ -1,0 +1,46 @@
+Q.  What is Service Catalog?
+A.  The Service Catalog is a request ordering system in ServiceNow that allows users to request services and products offered by different departments within an organization.
+    Example:
+    The Hosting Team provides cloud computing services where users can request cloud servers.
+    The Windows Team offers a password reset service for users to reset their Windows passwords.
+    ✅Benefits of Service Catalog
+    Acts like an Amazon-like portal for internal services.
+    A one-stop shop to access various services from different departments.
+    Categorized items help users find the correct service easily.
+    Supports multiple catalogs for organizing services.
+
+    ✅Service Catalog Categories
+    Services and products are grouped into logical categories for better organization.
+    Ex Categories: Hardware, Software, Desktops.
+
+    ✅Catalog Items
+    These are the actual services or products offered, represented as forms users fill out.
+    Submitting a form creates related tasks for fulfillment teams.
+    https://dev347964.service-now.com/now/nav/ui/classic/params/target/sc_cat_item.do%3Fsys_id%3D1203b36cc3ce6a10dbc11c65e4013132%26sysparm_record_list%3Dsc_catalogs%253D52c1bfacc38e6a10dbc11c65e4013143%255EORDERBYname%26sysparm_record_row%3D1%26sysparm_record_rows%3D1%26sysparm_record_target%3Dsc_cat_item
+
+    ✅Service Catalog Roles
+    admin
+    catalog_admin
+    catalog_manager
+    catalog_editor
+    Each role has specific permissions to manage the catalog, items, and workflows.
+
+    ✅Key Components of Service Catalog
+    Order – A single catalog item (e.g., Laptop, Monitor).
+    Order Guide – A bundle of items requested together (e.g., Laptop + Charger for new employee onboarding).
+    Record Producer – A form to create records in existing tables (e.g., Incident, Change) with selected fields.
+
+    Order Form – The interface users fill with inputs (variables).
+    Variables & Variable Sets – Fields that capture user inputs during the request.
+
+    ✅Ordering Process
+    Workflows: Admin-defined processes including approvals, assignments, and scripts for handling requests.
+    Flows: No-code/low-code drag-and-drop designer for automating request processing.
+
+    ✅Request Output
+    When a user submits a catalog request:
+    A Request [sc_request] record is created.
+    This request can generate related Requested Items [sc_req_item] and Tasks [sc_task] for fulfillment.
+    EXPLANIND - https://chatgpt.com/share/68444962-977c-8013-a63a-523452e0988e
+
+
